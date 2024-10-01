@@ -4,13 +4,10 @@
 #include <cwchar>
 #include <windows.h>
 
-#include "macros.hpp"
-
 /******************************************************************* 
 
  * Painter class provides a wrapper of double buffering, exposing a
-
- * update() interface for the user to render the current screen.
+   update() interface for the user to render the current screen.
 
 *******************************************************************/
 

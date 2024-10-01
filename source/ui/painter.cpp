@@ -1,4 +1,6 @@
 #include "ui/painter.hpp"
+#include "macros.hpp"
+
 #include <cstddef>
 #include <handleapi.h>
 #include <wincon.h>
