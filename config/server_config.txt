@@ -1,0 +1,2 @@
+maxroom = 8
+port = 12581
