@@ -27,14 +27,14 @@ private:
     std::vector<std::wstring> split(std::wstring& text, wchar_t key);
 
 public:
-    Config(std::wstring& path);
+    Config(std::wstring&& path);
 
     // look up the related config info specified by key
-    std::wstring& get(std::wstring& key);
+    std::wstring& get(std::wstring&& key);
 
     // update the config info to value specified by key
     // return non-zero value if failed in writing back to config file
-    int update(std::wstring& key, std::wstring& value);
+    int update(std::wstring&& key, std::wstring& value);
 };
 
 #endif

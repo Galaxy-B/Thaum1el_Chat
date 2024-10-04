@@ -24,10 +24,10 @@ std::vector<std::wstring> Config::split(std::wstring& text, wchar_t key)
         }
     }
 
-    return std::move(result);
+    return result;
 }
 
-Config::Config(std::wstring& path) : path_(path)
+Config::Config(std::wstring&& path) : path_(path)
 {
     // load config from the given path
     std::wifstream wifs;
@@ -55,12 +55,12 @@ Config::Config(std::wstring& path) : path_(path)
     wifs.close();
 }
 
-std::wstring& Config::get(std::wstring& key)
+std::wstring& Config::get(std::wstring&& key)
 {
     return infos_.at(key);
 }
 
-int Config::update(std::wstring& key, std::wstring& value)
+int Config::update(std::wstring&& key, std::wstring& value)
 {
     // update the map entry first
     infos_.at(key) = value;
